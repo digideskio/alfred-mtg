@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.chuckharmston.magic</string>
+	<key>connections</key>
+	<dict>
+		<key>010EDA78-58A5-48B0-89A1-2AE75444BB05</key>
+		<array/>
+		<key>5FC04B57-1946-4C0E-85F2-0D6B2D28E703</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FD3F39D4-3977-4790-91BF-18293588F4A3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>8869CE5E-6E1D-4D16-96EC-E2C6F9F7CD8C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6C070F21-3125-4E9F-B55A-25CF4AAFBA7B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>51EABB3A-7F46-45A7-A011-CEB745F1F862</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>A63E01D1-A72E-44BB-A773-5CE38A460552</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>63F5E0FA-05D2-4D6C-8D0C-E94D30E275AA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6C070F21-3125-4E9F-B55A-25CF4AAFBA7B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>B1AD41F2-F1FA-4CD2-9660-65D8C9D4C4A1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1705AECA-437B-4E15-A6B1-6CE0FEBBC045</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Chuck Harmston</string>
+	<key>description</key>
+	<string>Utilities for browsing and searching for Magic: The Gathering cards</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Magic: The Gathering</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>mtg page</string>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>source ~/.profile
+source ~/.bash_profile
+/usr/bin/env python mtg.py page "{query}"</string>
+				<key>subtext</key>
+				<string>Visit card page on magiccards.info</string>
+				<key>title</key>
+				<string>MTG: Card Page</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B1AD41F2-F1FA-4CD2-9660-65D8C9D4C4A1</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Image URL copied to clipboard</string>
+				<key>title</key>
+				<string>Magic: The Gathering</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>63F5E0FA-05D2-4D6C-8D0C-E94D30E275AA</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>magiccards.info/query?q={query}&amp;v=scan&amp;s=cname</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>FD3F39D4-3977-4790-91BF-18293588F4A3</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>mtg image</string>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>source ~/.profile
+source ~/.bash_profile
+/usr/bin/env python mtg.py image "{query}"</string>
+				<key>subtext</key>
+				<string>Copy card image to clipboard</string>
+				<key>title</key>
+				<string>MTG: Card Image</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A63E01D1-A72E-44BB-A773-5CE38A460552</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>6C070F21-3125-4E9F-B55A-25CF4AAFBA7B</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>1</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>mtg </string>
+				<key>hotkey</key>
+				<integer>46</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>M</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>010EDA78-58A5-48B0-89A1-2AE75444BB05</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>mtg spoiler</string>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>source ~/.profile
+source ~/.bash_profile
+/usr/bin/env python mtg.py spoiler "{query}"</string>
+				<key>subtext</key>
+				<string>Copy card spoiler to clipboard</string>
+				<key>title</key>
+				<string>MTG: Card Spoiler</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8869CE5E-6E1D-4D16-96EC-E2C6F9F7CD8C</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>1705AECA-437B-4E15-A6B1-6CE0FEBBC045</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Spoiler copied to clipboard</string>
+				<key>title</key>
+				<string>Magic: The Gathering</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>51EABB3A-7F46-45A7-A011-CEB745F1F862</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>mtg search</string>
+				<key>subtext</key>
+				<string>Search for cards on magiccards.info</string>
+				<key>text</key>
+				<string>MTG: Card Search</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5FC04B57-1946-4C0E-85F2-0D6B2D28E703</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>For card images, install Pillow using your favorite Python package manager:
+
+sudo easy_install Pillow
+
+To disable the use of thumbnails completely, set the environment variable `MTG_NO_THUMBNAILS` to anything in your `.profile` or `.bash_profile`.</string>
+	<key>uidata</key>
+	<dict>
+		<key>010EDA78-58A5-48B0-89A1-2AE75444BB05</key>
+		<dict>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>1705AECA-437B-4E15-A6B1-6CE0FEBBC045</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>51EABB3A-7F46-45A7-A011-CEB745F1F862</key>
+		<dict>
+			<key>ypos</key>
+			<real>310</real>
+		</dict>
+		<key>5FC04B57-1946-4C0E-85F2-0D6B2D28E703</key>
+		<dict>
+			<key>ypos</key>
+			<real>360</real>
+		</dict>
+		<key>63F5E0FA-05D2-4D6C-8D0C-E94D30E275AA</key>
+		<dict>
+			<key>ypos</key>
+			<real>70</real>
+		</dict>
+		<key>6C070F21-3125-4E9F-B55A-25CF4AAFBA7B</key>
+		<dict>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>8869CE5E-6E1D-4D16-96EC-E2C6F9F7CD8C</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>A63E01D1-A72E-44BB-A773-5CE38A460552</key>
+		<dict>
+			<key>ypos</key>
+			<real>140</real>
+		</dict>
+		<key>B1AD41F2-F1FA-4CD2-9660-65D8C9D4C4A1</key>
+		<dict>
+			<key>ypos</key>
+			<real>30</real>
+		</dict>
+		<key>FD3F39D4-3977-4790-91BF-18293588F4A3</key>
+		<dict>
+			<key>ypos</key>
+			<real>140</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://chuck.mn</string>
+</dict>
+</plist>
