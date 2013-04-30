@@ -137,7 +137,7 @@ source ~/.bash_profile
 				<key>plusspaces</key>
 				<false/>
 				<key>url</key>
-				<string>magiccards.info/query?q={query}&amp;v=scan&amp;s=cname</string>
+				<string>http://magiccards.info/query?q={query}&amp;v=scan&amp;s=cname</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
