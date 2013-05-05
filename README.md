@@ -5,7 +5,7 @@
 
 ## Installation
 
-[Download the workflow](http://chuck.mn/1B3T0b2R0f1D/mtg.alfredworkflow) and open the file with Alfred 2 to install.
+[Download the workflow](http://chuck.mn/0j2n2c1G2u3c/download/mtg.alfredworkflow) and open the file with Alfred 2 to install.
 
 
 ## Usage
