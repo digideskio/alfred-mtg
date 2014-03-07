@@ -7,6 +7,9 @@
 
 [Download the workflow](http://chuck.mn/0j2n2c1G2u3c/download/mtg.alfredworkflow) and open the file with Alfred 2 to install.
 
+To regenerate the Alfred Workflow from source:
+
+    git archive --format=zip --output=~/mtg.alfredworkflow HEAD
 
 ## Usage
 
